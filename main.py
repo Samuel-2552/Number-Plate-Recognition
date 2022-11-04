@@ -2,6 +2,7 @@ from PIL.Image import ImageTransformHandler
 import cv2
 import numpy as np
 import pytesseract
+import time
 
 pytesseract.pytesseract.tesseract_cmd="C:/Program Files (x86)/Tesseract-OCR/tesseract.exe"
 
@@ -20,11 +21,13 @@ states={"AN":"Andaman and Nicobar",
     "TS":"Telangana","JH":"Jharkhand","UK":"Uttarakhand"}
 
 def extract_num():
-    img=cv2.VideoCapture(0)
+    img=cv2.VideoCapture(1)
+
 
     while(True):
         # Capture image frame-by-frame
         ret, frame = img.read()
+        #time.sleep(1)
 
         # Our operations on the frame come here
         #img=cv2.resize(img,None,fx=0.5,fy=0.5)
