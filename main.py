@@ -39,6 +39,7 @@ def extract_num(img_filename):
         #read the text on the plate
         read=pytesseract.image_to_string(plate)
         read=''.join(e for e in read if e.isalnum())
+        print(read)
         stat=read[0:2]
         cv2.rectangle(img,(x,y),(x+w,y+h),(51,51,255),2)
         cv2.rectangle(img,(x-1,y-40),(x+w+1,y),(51,51,255),-1)
