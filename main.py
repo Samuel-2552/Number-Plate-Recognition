@@ -21,7 +21,7 @@ states={"AN":"Andaman and Nicobar",
     "TS":"Telangana","JH":"Jharkhand","UK":"Uttarakhand"}
 
 def extract_num():
-    img=cv2.VideoCapture(1)
+    img=cv2.VideoCapture(0)
 
 
     while(True):
