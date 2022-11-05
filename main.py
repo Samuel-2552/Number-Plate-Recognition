@@ -69,8 +69,8 @@ def extract_num():
             cv2.rectangle(frame,(x,y),(x+w,y+h),(51,51,255),2)
             cv2.rectangle(frame,(x-1,y-40),(x+w+1,y),(51,51,255),-1)
             cv2.putText(frame,read,(x,y-10),cv2.FONT_HERSHEY_SIMPLEX,0.9,(255,255,255),2)
-
-            cv2.imshow("plate",plate)
+            
+            #cv2.imshow("plate",plate)
 
         # Display the resulting frame
         #cv2.imshow('frame',gray)
@@ -83,4 +83,4 @@ def extract_num():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0")
+    app.run(debug=True,host="0.0.0.0",use_reloader=False)
