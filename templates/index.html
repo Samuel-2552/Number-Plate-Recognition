@@ -6,7 +6,21 @@
     <link rel="icon" href="http://example.com/favicon.png">
     <title>OZMENTA 2K22 HACKATHON</title>
     <script defer="defer" src="/static/js/main.82a9e27a.js"></script>
-    <link href="static/style.css" rel="stylesheet">
+    <link href="static\style.css" rel="stylesheet">
+    <style>
+        .card1{
+            width: 50%;
+            margin: auto;
+            border: 2px solid rgb(206, 201, 201); 
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .card1:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        @media screen and (max-width: 600px) {
+            .card1 {width: 100%;}
+        }
+    </style>
 </head>
 
 <body>
@@ -21,35 +35,41 @@
                     </div>
                 </div>
             </nav>
-            <div class="bg-[#242629] overflow-x-hidden">
-                <div
-                    class="w-full  mt-0 fit-content top-0 bg-[url('../public/images/bg.jpeg')] bg-cover bg-center flex justify-center items-center">
-                    <div class="flex flex-col justify-center items-center">
-                        <h1 class=" text-center lg:text-6xl text-4xl text-[#fffffe] font-bold drop-shadow-lg my-8">
-                            OZMENTA<span class="text-amber-500"> 2K22 </span> HACKATHON</h1>   
-                    </div>
+        <div class="bg-[#242629] overflow-x-hidden">
+            <div class="w-full  mt-0 fit-content top-0 bg-[url('../public/images/bg.jpeg')] bg-cover bg-center flex justify-center items-center">
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class=" text-center lg:text-6xl text-4xl text-[#fffffe] font-bold drop-shadow-lg my-8">
+                        OZMENTA<span class="text-amber-500"> 2K22 </span> HACKATHON
+                    </h1>   
                 </div>
-            <div class="bg-[#242629] overflow-x-hidden" style="margin-top: -100px;">
-                <div class="container mx-auto px-4 lg:px-24 text-center text-white  pb-48">
-                    <h1 class="py-24 font-bold ">AUTOMATIC <span
-                            class="text-amber-500">NUMBER </span> PLATE<span
-                            class="text-amber-500"> RECOGNITION</span></h1>
-                    
-                </div>
-                
-                
-                <footer class="text-center bg-gray-900 text-white">
-                    <div class="container px-6 pt-6 ml-5">
-                        <div class="flex flex-row justify-center mb-6 lg:text-2xl text-lg">
-                            <p class="text-left" style="margin-left:150px">MEET OUR TEAM</p>
-                        </div>
-                    </div>
-                    <div class="text-center  p-4"><a class="text-whitehite"
-                            href="https://ozmenta-2k22.netlify.app/">OZMENTA 2K22 HACKATHON</a></div>
-                </footer>
             </div>
+        <div class="bg-[#242629] overflow-x-hidden" style="margin-top: -100px;">
+            <div class="container mx-auto px-4 lg:px-24 text-center text-white  pb-48">
+                <h1 class="py-24 font-bold ">AUTOMATIC <span
+                            class="text-amber-500">NUMBER </span> PLATE<span
+                            class="text-amber-500"> RECOGNITION</span>
+                </h1>
+            </div>
+            
+            <div class="row card1">
+                <div class="col-lg-8  offset-lg-2">
+                    <h3 class="mt-5" style="color:white">Live Streaming</h3>
+                        <img src="{{ url_for('video_feed') }}" width="100%">
+                    <br>    
+                </div>
+            </div>
+                
+            <footer class="text-center bg-gray-900 text-white">
+                <div class="container px-6 pt-6 ml-5">
+                    <div class="flex flex-row justify-center mb-6 lg:text-2xl text-lg">
+                            <p class="text-left" style="margin-left:150px">MEET OUR TEAM</p>
+                    </div>
+                </div>
+                <div class="text-center  p-4"><a class="text-whitehite" href="https://ozmenta-2k22.netlify.app/">OZMENTA 2K22 HACKATHON</a></div>
+            </footer>
         </div>
     </div>
+</div>
 </body>
 
 </html>
