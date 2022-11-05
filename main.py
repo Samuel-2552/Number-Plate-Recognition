@@ -69,6 +69,8 @@ def extract_num():
             cv2.rectangle(frame,(x,y),(x+w,y+h),(51,51,255),2)
             cv2.rectangle(frame,(x-1,y-40),(x+w+1,y),(51,51,255),-1)
             cv2.putText(frame,read,(x,y-10),cv2.FONT_HERSHEY_SIMPLEX,0.9,(255,255,255),2)
+            yield (b'--frame\r\n'
+            b'Content-Type: image/jpeg\r\n\r\n' + plate + b'\r\n')
             
             #cv2.imshow("plate",plate)
 
